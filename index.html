@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт временно недоступен - клуб кендо «Хебикан»</title>
+  <meta name="description" content="Сайт клуба кендо «Хебикан» временно недоступен. Тренировки идут по расписанию. Новости и связь: Telegram, ВКонтакте, Дзен, YouTube и Rutube.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="canonical" href="https://hebikan.ru/">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="64x64">
+  <link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <style>
+    :root {
+      --ink: #f2eee6;
+      --ink-soft: #e0dbd0;
+      --ink-muted: #b8b2a6;
+      --washi: #0b0b0b;
+      --paper: #141414;
+      --panel: #050505;
+      --on-accent: #0b0b0b;
+      --vermilion: #ff9700;
+      --vermilion-hover: #ffb03d;
+      --vermilion-soft: rgba(255, 151, 0, 0.12);
+      --border: rgba(255, 255, 255, 0.1);
+      --border-strong: rgba(255, 255, 255, 0.2);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--washi);
+    }
+    img, svg { display: block; max-width: 100%; height: auto; }
+    a { color: var(--vermilion); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+    a:hover { color: var(--vermilion-hover); }
+    :focus-visible { outline: 3px solid var(--vermilion); outline-offset: 3px; }
+    .wrap {
+      width: min(100% - 2rem, 720px);
+      margin: 0 auto;
+      padding: 2.5rem 0 3rem;
+      flex: 1;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .logo-img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      flex: none;
+      box-shadow: 0 0 0 2px rgba(255,151,0,0.35);
+    }
+    .brand { font-weight: 700; font-size: 1.2rem; letter-spacing: 0.02em; line-height: 1.2; }
+    .brand small {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--ink-muted);
+      letter-spacing: 0.12em;
+      margin-top: 0.1em;
+    }
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.6rem, 4vw, 2.05rem);
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .lead { margin: 0 0 1.75rem; color: var(--ink-soft); }
+    h2 {
+      margin: 0 0 0.85rem;
+      font-size: 1.05rem;
+      color: var(--vermilion);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.25rem;
+      margin-bottom: 1.15rem;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 0.45rem 0; }
+    th { color: var(--vermilion); font-weight: 600; border-bottom: 1px solid rgba(255,151,0,0.35); width: 42%; }
+    td { color: var(--ink-soft); border-bottom: 1px solid var(--border); }
+    tr:last-child th, tr:last-child td { border-bottom: 0; }
+    .contacts { list-style: none; margin: 0; padding: 0; }
+    .contacts li { margin: 0.35rem 0; color: var(--ink-soft); }
+    .socials {
+      display: grid;
+      gap: 0.7rem;
+    }
+    .social {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      min-height: 64px;
+    }
+    .social:hover, .social:focus-visible {
+      border-color: var(--vermilion);
+      color: var(--ink);
+    }
+    .social.primary {
+      border-color: var(--vermilion);
+      background: linear-gradient(135deg, var(--vermilion-soft), var(--paper));
+    }
+    .ic {
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--vermilion-soft);
+      color: var(--vermilion);
+    }
+    .social.primary .ic { background: var(--vermilion); color: var(--on-accent); }
+    .social strong { display: block; font-size: 1rem; }
+    .social span { color: var(--ink-muted); font-size: 0.88rem; }
+    .social.primary span { color: var(--vermilion); }
+    footer {
+      margin-top: 2rem;
+      color: var(--ink-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <img class="logo-img" src="/assets/img/logo.svg" width="52" height="52" alt="Логотип клуба «Хебикан»">
+      <div class="brand">Хебикан<small>КЛУБ КЕНДО</small></div>
+    </header>
+    <h1>Сайт временно недоступен</h1>
+    <p class="lead">Мы уже работаем над тем, чтобы вернуть hebikan.ru. Тренировки идут по расписанию. Новости и связь с клубом - в соцсетях и по телефону.</p>
+
+    <section class="card" aria-labelledby="sch">
+      <h2 id="sch">Расписание</h2>
+      <table>
+        <tbody>
+          <tr><th>Вторник</th><td>20:00 - 22:00</td></tr>
+          <tr><th>Четверг</th><td>20:00 - 22:00</td></tr>
+          <tr><th>Суббота</th><td>19:00 - 21:00</td></tr>
+          <tr><th>Воскресенье</th><td>19:00 - 21:00</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" aria-labelledby="ct">
+      <h2 id="ct">Контакты</h2>
+      <ul class="contacts">
+        <li>Адрес: г. Москва, ул. Трофимова, 30, корп. 3 (м. Кожуховская, 5 минут пешком)</li>
+        <li>Телефон: <a href="tel:+79264470370">+7 926 447-03-70</a></li>
+        <li>E-mail: <a href="mailto:info@hebikankendo.ru">info@hebikankendo.ru</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="soc">
+      <h2 id="soc">Мы в соцсетях</h2>
+      <div class="socials">
+        <a class="social primary" href="https://t.me/hebikan" target="_blank" rel="noopener">
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 8-6"/></svg></span>
+          <span><strong>Telegram</strong><span>@hebikan</span></span>
+        </a>
+        <a class="social primary" href="https://vk.com/hebikankendo" target="_blank" rel="noopener">
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7c1 6 4 10 9 10h1v-3c2 0 3 1 4 3h3c-1-3-3-4-4-5 1-1 3-3 3-5h-3c-1 2-2 3-3 4V7h-3v6c-2-1-3-3-4-6z"/></svg></span>
+          <span><strong>ВКонтакте</strong><span>vk.com/hebikankendo</span></span>
+        </a>
+        <a class="social" href="https://dzen.ru/hebikan" target="_blank" rel="noopener">
+          <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c0 5 4 9 9 9-5 0-9 4-9 9 0-5-4-9-9-9 5 0 9-4 9-9z"/></svg></span>
+          <span><strong>Яндекс Дзен</strong><span>dzen.ru/hebikan</span></span>
+        </a>
+        <a class="social" href="https://www.youtube.com/@hebikankendo" target="_blank" rel="noopener">
+          <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></span>
+          <span><strong>YouTube</strong><span>@hebikankendo</span></span>
+        </a>
+        <a class="social" href="https://rutube.ru/channel/82365836/" target="_blank" rel="noopener">
+          <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9m4 0 3 4"/></svg></span>
+          <span><strong>Rutube</strong><span>Школа кендо «Хебикан»</span></span>
+        </a>
+      </div>
+    </section>
+
+    <footer>Клуб кендо «Хебикан», Москва</footer>
+  </main>
+</body>
+</html>
